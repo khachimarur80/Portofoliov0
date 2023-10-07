@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kei's Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/Logo.png" type="image/x-icon">
+</head>
+<body>
+    <div id="app">
+        <button id="back-to-top-btn" onclick="scrollToTop()">
+        </button>
+        <div id="navbar">
+        </div>
+    	<div id="main">
+    		<div class="text">
+    			<p>Hey, I'm Kei</p>
+                <div id="quick-navbar">
+                    <a href="#about">
+                        About
+                    </a>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </div>
+    		</div>
+      	</div>
+        <br>
+        <div class="frame animate-out" id="about">
+            <div class="frame-text">
+                <h1>About me</h1>
+                <p>
+                    I live in Madrid and I'm a first-year computer science student. I like going to the gym, playing the violin, and, of course, coding!
+                </p>
+            </div>
+            <div class="frame-image">
+                <img src="images/Retiro.jpg" alt="Kei at Madrid's Retiro" height="100%">
+            </div>
+        </div>
+        <div class="frame animate-out" id="skills">
+            <div class="frame-image" style="justify-content: center;">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; justify-items: center;">
+                    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank"><img src="images/javascript-plain.svg" alt="JavaScript Icon" height="45" width="45" ></a>
+                    <a href="https://www.python.org" target="_blank"><img src="images/python-original.svg" alt="Python Icon" height="45" width="45"></a>
+                    <a href="https://developer.mozilla.org/docs/Web/html" target="_blank"><img src="images/html5-original.svg" alt="HTML5 Icon" height="45" width="45"></a>
+                    <a href="developer.mozilla.org/docs/Web/CSS" target="_blank"><img src="images/css3-original.svg" alt="CSS3 Icon" height="45" width="45"></a>
+                    <a href="https://vuejs.org" target="_blank"><img src="images/vuejs-original.svg" alt="Vue Icon" height="45" width="45"></a>
+                    <a href="https://www.electronjs.org" target="_blank"><img src="images/electron-original.svg" alt="Electron Icon" height="45" width="45"></a>
+                    <a href="https://vuetifyjs.com" target="_blank"><img src="images/vuetify-original.svg" alt="Vuetify Icon" height="45" width="45"></a>
+                    <a href="https://www.djangoproject.com" target="_blank"><img src="images/django-plain.svg" alt="Django Icon" height="45" width="45"></a>
+                    <a href="https://nodejs.org" target="_blank"><img src="images/nodejs-original.svg" alt="Node Icon" height="45" width="45"></a>
+                </div>
+            </div>
+            <div class="frame-text">
+                <h1>My skills</h1>
+                <p>
+                    I'm a self-taught developer with expertise in various technologies that has been learning while building. That's why I love learning new frameworks and libraries.
+                </p>
+            </div>
+        </div>
+        <div class="frame animate-out" id="projects">
+            <div class="frame-text">
+                <h1>My Projects</h1>
+                <p>
+                    Here are some of my favorite projects:
+                </p>
+                <ul>
+                    <li>
+                        <a href="#Luhmann" target="_blank">Luhmann</a><p> Knowledge sharing platform.</p>
+                    </li>
+                    <li>
+                        <a href="#Diamond" target="_blank">Diamond</a><p> An obsidian-like text editor.</p>
+                    </li>
+                    <li>
+                        <a href="#Kestoik" target="_blank">Kestoik</a><p> Your life tracker.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="frame-image" >
+                <img src="images/Logo.png" alt="Kei's Logo" height="150" width="150">
+            </div>
+        </div>
+        <div class="frame animate-out" id="Luhmann">
+            <div class="frame-image">
+                <img src="images/Luhmann.png" alt="Luhmann icon"  height="150" width="150">
+            </div>
+            <div class="frame-text">
+                <h1>Luhmann</h1>
+                <p>
+                    Knowledge sharing platform.
+                </p>
+            </div>
+        </div>
+        <div class="frame animate-out" id="Diamond">
+            <div class="frame-text">
+                <h1>Diamond</h1>
+                <p>An obsidian-like text editor.</p>
+            </div>
+            <div class="frame-image">
+                <img src="images/Diamond.png" alt="Diamond icon"  height="150" width="150">
+            </div>
+        </div>
+        <div class="frame animate-out" id="Kestoik">
+            <div class="frame-image">
+                <img src="images/Kestoik.png" alt="Kestoik icon"  height="150" width="150">
+            </div>
+            <div class="frame-text">
+                <h1>Kestoik</h1>
+                <p>
+                    Your life tracker.
+                </p>
+            </div>
+        </div>
+        <div class="frame animate-out" id="contact">
+            <div class="frame-text" style="display: flex; justify-content: flex-start; flex-direction:column; gap: 50px">
+                <h1>Get in touch</h1>
+                <div style="display:flex; gap: 10px">
+                    <a href="mailto:khachimarur80@gmail.com" target="_blank"><img src="images/gmail.png" height="30" width="30" alt="Gmail icon"></a>
+                    <a href="https://github.com/khachimarur80" target="_blank"><img src="images/github.png" height="30" width="30" alt="Github icon"></a>
+                    <!--<a href="https://linkedin.com/redirect-here"><img src="images/linkedin.png" height="30" width="30" alt="LinkedIn icon"></a>-->
+                    <a href="https://instagram.com/krhachimaru" target="_blank"><img src="images/instagram.png" height="30" width="30" alt="Instagram icon"></a>
+
+                </div>
+            </div>
+            <div class="frame-image">
+                <form id="contact-form" class="form-group" style="display: flex; flex-direction: column; gap: 10px">
+                    <input type="hidden" name="contact_number">
+                    <label for="user_name">Name</label>
+                    <input type="text" id="user_name" class="form-control" name="from_name" required>
+                    <label for="user_email">Email</label>
+                    <input type="email" id="user_email" class="form-control" name="user_email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" name="message" required></textarea>
+                    <div style="width: 100%; display: flex; justify-content: flex-end;">
+                        <button type="submit" class="btn btn-secondary" id="send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+

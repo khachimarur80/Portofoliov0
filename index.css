@@ -1,0 +1,442 @@
+:root {
+    --primary: #42b883;
+}
+body, html {
+	height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#app {
+	flex: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: 'HelveticaNeue-Thin';
+	padding-top: 60px;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+
+@keyframes colorTransition {
+    0% {
+        background-size: 0% 0%; /* Start with no color */
+    }
+    100% {
+        background-size: 100% 100%; /* End with full red color */
+    }
+}
+#navbar {
+	height: 60px;
+	left: 0;
+	right: 0;
+	background: #42b883;
+	position: fixed;
+	top: 0px;
+	z-index: 10;
+}
+#main {
+	width: 80%;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	background: white;
+}
+
+.text {
+	font-size: 60px;
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-top: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	mix-blend-mode: screen;
+}
+
+
+.drop-container-outline-1 {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 30%;
+	width: 20px !important;
+	height: 100%;
+}
+.drop-container-outline-2  {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	width: 20px !important;
+	height: 100%;
+}
+.drop-container-outline-3  {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	right: 30%;
+	width: 20px !important;
+	height: 100%;
+}
+
+.drop-container-1 {
+	position: absolute;
+	top: 0px;
+	left: 30%;
+	width: 20px !important;
+	height: 100%;
+}
+.drop-container-2 {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 20px !important;
+	height: 100%;
+}
+.drop-container-3 {
+	position: absolute;
+	top: 0px;
+	right: 30%;
+	width: 20px !important;
+	height: 100%;
+}
+
+.drop, .wave {
+  margin: 175px auto;
+}
+
+.drop {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	z-index: 2;
+	top: 5px;
+	margin: 0 auto;
+	background: #42b883;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-animation-name: drip;
+	-webkit-animation-name: drip;
+	animation-name: drip;
+	-moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-moz-animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-moz-animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+.drop-outline {
+	position: relative;
+	z-index: 2;
+	width: 20px;
+	height: 20px;
+	top: -30px;
+	margin: 0 auto;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-animation-name: drip;
+	-webkit-animation-name: drip;
+	animation-name: drip;
+	-moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-moz-animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-moz-animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+.drop:before {
+  content: "";
+  position: absolute;
+  width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 30px solid #42b883;
+  top: -22px;
+}
+
+.wave {
+	position: relative;
+	opacity: 0;
+	top: 0;
+	width: 2px;
+	height: 1px;
+	left: -1px;
+	border: #42b883 7px solid;
+	background: #42b883;
+	border-radius: 300px / 150px;
+	animation-name: ripple;
+	animation-delay: .5s;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wave-outline {
+	position: relative;
+	opacity: 0;
+	top: 0;
+	width: 2px;
+	height: 1px;
+	left: -1px;
+	border: #42b883 7px solid;
+	border-radius: 300px / 150px;
+	animation-name: ripple-3;
+	animation-delay: .5s;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wave:after {
+	content: "";
+	position: absolute;
+	opacity: 0;
+	top: -5px;
+	left: 0;
+	width: 2px;
+	height: 1px;
+	border: #42b883 5px solid;
+	border-radius: 50%;
+	animation-name: ripple-2;
+	animation-duration: 2s;
+	animation-fill-mode: forwards !important;
+	animation-iteration-count: 1;
+}
+
+@keyframes ripple {
+    from {
+		opacity: 1;
+    }
+    to {
+		width: 700px;
+		height: 350px;
+		border-width: 1px;
+		top: -250px;
+		left: -300px;
+		opacity: 1;
+    }
+}
+
+@keyframes ripple-3 {
+	from {
+		opacity: 1;
+    }
+    to {
+		width: 600px;
+		height: 300px;
+		border-width: 1px;
+		top: -150px;
+		left: -300px;
+		opacity: 0;
+    }
+}
+@keyframes ripple-2 {
+    0% {
+    	opacity: 1;
+    }
+  	100% {
+	    width: 350px;
+	    height: 150px;
+	    border-width: 1px;
+	    top: 100px;
+	    left: 0px;
+  	}
+}
+
+@keyframes drip {
+    to {
+      top: 190px;
+    }
+}
+
+
+.text a {
+	text-decoration: none;
+	color: unset !important;
+}
+
+#quick-navbar {
+	position: absolute;
+	bottom: 20px;
+	width: fit-content;
+	height: 30px;
+	font-size: 20px;
+	z-index: 1;
+	/*mix-blend-mode: screen;*/
+	margin: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	gap: 10px;
+}
+
+
+.v-btn {
+    font-weight: bold; 
+ }
+.frame {
+	width: 80%;
+	height: 250px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	transition: opacity 0.5s, transform 0.5s;
+	padding: 20px;
+}
+.frame:last-child {
+	height: 350px;
+}
+
+.frame-text {
+	width: 50% ;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.frame-image {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateX(0) !important;
+}
+.animate-out {
+	opacity: 0;
+	transform: translateX(-100%);
+}
+.animate-out:nth-child(2n) {
+ 	opacity: 0;
+	transform: translateX(100%) !important;
+}
+
+
+
+.frame h1 {
+	font-weight: 100;
+	font-size: 30px;
+	color: #42b883;
+}
+
+#contact-form {
+	width: 100%;
+	height: fit-content;
+}
+
+.btn-primary {
+    background-color: #42b883 !important;
+    border-color: #42b883 !important;
+    pointer-events: none;
+}
+.form-control:focus {
+	box-shadow: 0 0 0 2px rgba(66, 184, 131, 0.5) !important;
+	border-color: #42b883 !important;
+}
+
+/* Add this to your CSS stylesheet */
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background: #42b883;
+    background-image: url('images/chevron-up.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    z-index: 5;
+}
+
+#back-to-top-btn:hover {
+	opacity: .7;
+}
+
+@media (max-width: 768px) {
+    #main {
+        width: 100%;
+    }
+    .frame {
+    	width: 100%;
+    	gap: 0px;
+    	height: 150px;
+    }
+    #about {
+    	flex-direction: column-reverse;
+    	height: 350px;
+    	gap: 20px;
+    }
+    #about img {
+    	width: 100%;
+    }
+    #about .frame-image, #about .frame-text {
+    	width: 100%;
+    }
+    #back-to-top-btn {
+    	bottom: 50px;
+    	height: 35px;
+    	width: 35px;
+    }
+    #skills img {
+    	height: 30px;
+    	width: 30px;
+    }
+    #skills  {
+    	height: 300px;
+    }
+    #projects p {
+    	display: none;
+    }
+    #Luhmann img, #Diamond img, #Kestoik img, #projects img {
+    	height: 100px;
+    	width: 100px;
+    }
+    #contact {
+    	flex-direction: column-reverse;
+    	height: 550px;
+    	padding-bottom: 50px;
+    }
+    #contact .frame-image, #contact .frame-text {
+    	width: 100%;
+    }
+}
